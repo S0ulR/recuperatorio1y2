@@ -26,23 +26,36 @@
     </header>
     <section>
         <h1>Formulario de registro</h1>
-        <form name="formulario" action="" id="formulario" onsubmit="return validacion()">
-            <label for="nombre">(*) Nombre: </label>
-            <input type="text" name="nombre" id="nombreInput" placeholder="Introduzca su nombre">
-            <label for="apellido">(*) Apellido: </label>
-            <input type="text" name="apellido" id="apellidoInput" placeholder="Introduzca su apellido">
-            <label for="email">(*) E-mail: </label>
-            <input type="email" name="email" id="emailInput" placeholder="Escriba su e-mail">
-            <label for="reemail">(*) Repita su e-mail: </label>
-            <input type="email" name="reemail" id="reemailInput" placeholder="Repita su e-mail">
-            <label for="contrasena">(*) Contraseña: </label>
-            <input type="password" name="contrasena" id="contrasenaInput" placeholder="Escriba su contraseña">            
-            <label for="recontrasena">(*) Repita su contraseña: </label>
-            <input type="password" name="recontrasena" id="recontrasenaInput" placeholder="Repita su contraseña">
-            <p id="nombreError"></p>
+        <form name="formulario" action="" id="formulario" method="get">
+            <div class="formInput">
+                <label for="nombre">(*) Nombre: </label>
+                <input type="text" name="nombre" id="nombreInput" placeholder="Introduzca su nombre">
+                <p class="errorNombre" id="errorNombre" style="display:none;color: red;" >Error</p>
+                <label for="apellido">(*) Apellido: </label>
+                <input type="text" name="apellido" id="apellidoInput" placeholder="Introduzca su apellido">
+                <p class="errorApellido" id="errorApellido" style="display:none;color: red;" >Error</p>
+                <label for="email">(*) E-mail: </label>
+                <input type="email" name="email" id="emailInput" placeholder="Escriba su e-mail">
+                <p class="errorEmail" id="errorEmail" style="display:none;color: red;" >Error</p>
+                <label for="reemail">(*) Repita su e-mail: </label>
+                <input type="email" name="reemail" id="reemailInput" placeholder="Repita su e-mail">
+                <p class="errorReemail" id="errorReemail" style="display:none;color: red;" >Error</p>
+                <label for="contrasena">(*) Contraseña: </label>
+                <input type="password" name="contrasena" id="contrasenaInput" placeholder="Escriba su contraseña">
+                <p class="errorContrasena" id="errorContrasena" style="display:none;color: red;" >Error</p>
+                <label for="recontrasena">(*) Repita su contraseña: </label>
+                <input type="password" name="recontrasena" id="recontrasenaInput" placeholder="Repita su contraseña">
+                <p class="errorRecontrasena" id="errorRecontrasena" style="display:none;color: red;" >Error</p>
+            </div>
             <p>(*) Campos obligatorios</p>
-            <button class="enviar" type="submit">Registrar usuario</button>
-            <p class="warnings" id="warnings"></p>
+            <button id="submit" onclick="modal()">Registrar usuario</button>
+
+            <div id="modal" class="modal">
+            <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Registro exitoso. Muchas gracias.</p>
+            </div>
+            </div>
         </form>
     </section>
     <footer>
