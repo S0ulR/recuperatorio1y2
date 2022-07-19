@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/estilos.css">
     <link rel="stylesheet" href="css/normalize.css">
-    <script type="text/javascript" src="js/funciones.js" ></script>
     <title>RECUPERATORIO - LPPA - Leandro Ruiz</title>
     <meta name="author" content="Leandro Ruiz">
 </head>
@@ -22,28 +21,41 @@
     </header>
     <main id="login">
         <div id="login-body" >
-            <form id="form">                
+            <form id="formulario">                
                 <label for="email">E-mail</label>
                 <input id="email" class="" type="email" name="name">
                 <p></p>
                 <label for="pass">Contraseña</label>
                 <input id="pass" class="formulario-clase" type="password" name="pass" minlength="8" maxlength="8">
                 <p></p>
-                <input id="submit" class="enviar-form btn btn-primary" type="submit" value="Iniciar sesión">
+                <input id="submit" class="enviar" type="submit" value="Iniciar sesión">
             </form>
         </div>
+        <table class="table">
+            <thead class="table-header">
+                <tr class="table-tr">
+                    <td class="table-th">ID</td>
+                    <td class="table-th">Nombre</td>
+                    <td class="table-th">Usuario</td>
+                    <td class="table-th">Email</td>
+                    <td class="table-th">Dirección</td>
+                    <td class="table-th">Teléfono</td>
+                </tr>
+            </thead>
+            <tbody class="table-body" id="tableContainer"></tbody>
+        </table>        
     </main>
-    <div id="myModal" class="modal">
+    <div id="modal" class="modal">
         <div class="modal-content">
             <div class="modal-header">
                 <span class="close">&times;</span>
                 <h2>Error en el inicio de sesión</h2>
             </div>
             <div class="modal-body">
-                <p>Usuario no válido</p>
+                <p class="errorLogin">Usuario no válido</p>
             </div>
-            <div class="modal-footer">
-                <h3>Muchas gracias</h3>
+            <div class="modal-body">
+                <p class="errorModal">La página no se pudo cargar correctamente</p>
             </div>
         </div>
     </div>
