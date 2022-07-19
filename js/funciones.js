@@ -59,7 +59,7 @@ window.onload = function () {
       }
   }
 
-  function validaPass(e){
+  /*function validaPass(e){
     const pass = document.getElementById('contrasenaInput');
     var errorPass = document.getElementById('errorContrasena');
     if(pass.value.length < 6){
@@ -71,9 +71,10 @@ window.onload = function () {
     else{
         errorPass.display='none';
     }
-  }
+  }*/
 
   function validaRepass(e){
+    const pass = document.getElementById('contrasenaInput');
     const repass = document.getElementById('recontrasenaInput');
     var errorRepass = document.getElementById('errorRecontrasena');
     if(repass.value !== pass.value){
@@ -81,9 +82,6 @@ window.onload = function () {
       errorRepass.style.display='block';
       errorRepass.innerHTML='Las contraseñas ingresadas deben coincidir';
       error = true;
-    }
-    else{
-        errorRepass.display='none';
     }
   }
 
@@ -95,27 +93,22 @@ window.onload = function () {
       validaLetras(apellido,errorApellido);
       validaEmail();
       validaReemail();
-      validaPass();
+      //validaPass();
       validaRepass();
       if(!error) modal.style.display = "block";
   })    
 
 var modal = document.getElementById("modal");
-var button = document.getElementById("submit");
+var btn = document.getElementById("submit");
 var span = document.getElementsByClassName("close")[0];
 
-button.onclick = function modal() {
-  modal.style.display = "block";
-}
-
-span.onclick = function() {
+span.onclick = function () {
   modal.style.display = "none";
-}
+};
 
-window.onclick = function(event) {
-if (event.target == modal) {
-  modal.style.display = "none";
+window.onclick = function (event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
 }
 }
-}
-
