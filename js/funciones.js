@@ -61,6 +61,8 @@ window.onload = function () {
 
   function validaPass(e){
     var pass = document.getElementById('contrasenaInput');
+  /*function validaPass(e){
+    const pass = document.getElementById('contrasenaInput');
     var errorPass = document.getElementById('errorContrasena');
     if(pass.value.length < 6){
       pass.style.borderColor= "red";
@@ -68,11 +70,21 @@ window.onload = function () {
       errorPass.innerHTML='La contraseña debe contener más de 6 caracteres';
       error = true;
     }
+
   }
 
   function validaRepass(e){
     var repass = document.getElementById('recontrasenaInput');
     var pass = document.getElementById('contrasenaInput');
+
+    else{
+        errorPass.display='none';
+    }
+  }*/
+
+  function validaRepass(e){
+    const pass = document.getElementById('contrasenaInput');
+    const repass = document.getElementById('recontrasenaInput');
     var errorRepass = document.getElementById('errorRecontrasena');
     if(repass.value !== pass.value){
       repass.style.borderColor= "red";
@@ -90,14 +102,15 @@ window.onload = function () {
       validaLetras(apellido,errorApellido);
       validaEmail();
       validaReemail();
-      validaPass();
+      //validaPass();
       validaRepass();
       if(!error) modal.style.display = "block";
   })    
 
 var modal = document.getElementById("modal");
-var button = document.getElementById("submit");
+var btn = document.getElementById("submit");
 var span = document.getElementsByClassName("close")[0];
+
 
 button.onclick = function modal() {
   modal.style.display = "block";
@@ -105,13 +118,15 @@ button.onclick = function modal() {
 }
 
 span.onclick = function() {
+span.onclick = function () {
   modal.style.display = "none";
-}
+};
+
 
 window.onclick = function(event) {
+window.onclick = function (event) {
   if (event.target == modal) {
     modal.style.display = "none";
   }
 }
 }
-

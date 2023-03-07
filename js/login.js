@@ -1,4 +1,5 @@
 const form = document.getElementById("form");
+const form = document.getElementById("formulario");
 const email = document.getElementById("email");
 const pass = document.getElementById("pass");
 let iniciaSesion = 0;
@@ -6,6 +7,7 @@ let iniciaSesion = 0;
 let varBool = localStorage.getItem("iniciaSesion");
 if (varBool == 1) {
     window.location.assign('./dashboard.html');
+    window.location.assign('./login.html');
 }
 
 form.addEventListener("submit", function (e){
@@ -19,6 +21,7 @@ form.addEventListener("submit", function (e){
       if (successStatus) {
         saveCredentialsToLocalStorage(credentials)
         window.location.assign('./dashboard.html')
+        window.location.assign('./login.html')
         iniciaSesion = 1;
         localStorage.setItem("iniciaSesion", iniciaSesion);
       } else {
@@ -89,6 +92,7 @@ if (checkForLoginCredentialsInLocalStorage()) {
           iniciaSesion = 1;
           localStorage.setItem("iniciaSesion", iniciaSesion);
           window.location.assign('./dashboard.html')
+          window.location.assign('./login.html')
         }
       })
       .catch(function(error) {
@@ -96,11 +100,13 @@ if (checkForLoginCredentialsInLocalStorage()) {
       })
 } else {
     if (window.location.origin == './dashboard.html'){
+    if (window.location.origin == './login.html'){
       window.location.assign('/index.html')
     }
 }
 
 var modal = document.getElementById("myModal");
+var modal = document.getElementById("modal");
 var btn = document.getElementById("submit");
 var span = document.getElementsByClassName("close")[0];
 
@@ -112,4 +118,5 @@ window.onclick = function (event) {
   if (event.target == modal) {
     modal.style.display = "none";
   }
+}
 }

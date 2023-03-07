@@ -23,6 +23,7 @@
     <main id="login">
         <div id="login-body" >
             <form id="form">                
+            <form id="formulario">                
                 <label for="email">E-mail</label>
                 <input id="email" class="" type="email" name="name">
                 <p></p>
@@ -34,6 +35,24 @@
         </div>
     </main>
     <div id="myModal" class="modal">
+                <input id="submit" class="enviar" type="submit" value="Iniciar sesión">
+            </form>
+        </div>
+        <table class="table">
+            <thead class="table-header">
+                <tr class="table-tr">
+                    <td class="table-th">ID</td>
+                    <td class="table-th">Nombre</td>
+                    <td class="table-th">Usuario</td>
+                    <td class="table-th">Email</td>
+                    <td class="table-th">Dirección</td>
+                    <td class="table-th">Teléfono</td>
+                </tr>
+            </thead>
+            <tbody class="table-body" id="tableContainer"></tbody>
+        </table>        
+    </main>
+    <div id="modal" class="modal">
         <div class="modal-content">
             <div class="modal-header">
                 <span class="close">&times;</span>
@@ -44,6 +63,10 @@
             </div>
             <div class="modal-footer">
                 <h3>Muchas gracias</h3>
+                <p class="errorLogin">Usuario no válido</p>
+            </div>
+            <div class="modal-body">
+                <p class="errorModal">La página no se pudo cargar correctamente</p>
             </div>
         </div>
     </div>
