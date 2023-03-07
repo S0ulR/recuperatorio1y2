@@ -41,6 +41,7 @@ section, #login, .column{
     padding-top: 1%;
     font-family: 'Times New Roman', Times, serif;
     order: 2;
+    padding: 5%;
 }
 
 .contenido{
@@ -72,7 +73,7 @@ label{
     text-align: center;
 }
 
-button{
+button, .button{
     background-color: #710056;
     color: #ffffff;
     border: #ffffff solid 1px;
@@ -191,9 +192,10 @@ ul li a:hover{
 section, .contenido{
     align-items: flex-start;
     margin-left: 50px;
+    padding: 0;
 }
 
-button{
+button, .button{
     width: auto;
 }
 
