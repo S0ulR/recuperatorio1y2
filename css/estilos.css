@@ -17,15 +17,6 @@ header {
     order: 1;
 }
 
-.sesion{
-    font-size: 2rem;
-    color: #ffffff;
-    font-style: italic;
-    float: right;
-    margin-right: 2rem;
-    text-shadow: none;
-}
-
 nav ul{
     list-style: none;
     padding: 5px 0;
@@ -46,7 +37,7 @@ nav li a{
     text-align: center;
 }
 
-section{
+section, #login, .column{
     padding-top: 1%;
     font-family: 'Times New Roman', Times, serif;
     order: 2;
@@ -69,12 +60,6 @@ footer{
     margin-top: 2%;
 }
 
-select{
-    display: flex;
-    flex-direction: column;
-    margin-left: 3%;
-}
-
 input{
     width: 100%;
 }
@@ -87,14 +72,6 @@ label{
     text-align: center;
 }
 
-textarea{
-    display: flex;
-    flex-direction: column;
-    height:5rem ;
-    width: 20rem;
-    margin-bottom: 2%;
-}
-
 button{
     background-color: #710056;
     color: #ffffff;
@@ -104,21 +81,6 @@ button{
 
 .pass{
     margin-bottom: 1%;
-}
-
-.form-control.ok input{
-    border: 1px solid;
-    border-color: #08ffc8;
-}
-
-.form-control.falla input{
-    border: 1px solid;
-    border-color: #FB0303;
-}
-
-.form-control.falla p{
-    visibility: visible;
-    border-color: #FB0303;
 }
 
 p{
@@ -177,6 +139,15 @@ a{
   cursor: pointer;
 }
 
+.table {
+    width: 100%;
+}
+  
+.table-th, th, td {
+    border: 1px solid;
+    text-shadow: none;
+}
+
 @media only screen and (min-width: 980px) {
       
 body{
@@ -201,6 +172,10 @@ ul li a{
     text-align: center;
     border: 2px #ffffff solid;
     line-height: 30px;
+}
+
+#login{
+    margin-left: 2%;
 }
 
 input{

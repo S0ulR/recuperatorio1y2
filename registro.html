@@ -13,14 +13,11 @@
 </head>
 <body>
     <header>
-        <div class="sesion">
-            <a href="login.html">Ingresar</a>
-        </div>
         <nav>
             <ul>
                 <li><a href="index.html">Inicio</a></li>
-                <li><a href="registro.html">Regístrate</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="registro.html">Recuperatorio1</a></li>
+                <li><a href="login.html">Recuperatorio2</a></li>
             </ul>
         </nav>
     </header>
@@ -30,31 +27,31 @@
             <div class="formInput">
                 <label for="nombre">(*) Nombre: </label>
                 <input type="text" name="nombre" id="nombreInput" placeholder="Introduzca su nombre">
-                <p class="errorNombre" id="errorNombre" style="display:none;color: red;" >Error</p>
+                <p class="errorNombre" id="errorNombre" style="display:none;color: red;" ></p>
                 <label for="apellido">(*) Apellido: </label>
                 <input type="text" name="apellido" id="apellidoInput" placeholder="Introduzca su apellido">
-                <p class="errorApellido" id="errorApellido" style="display:none;color: red;" >Error</p>
+                <p class="errorApellido" id="errorApellido" style="display:none;color: red;" ></p>
                 <label for="email">(*) E-mail: </label>
                 <input type="email" name="email" id="emailInput" placeholder="Escriba su e-mail">
-                <p class="errorEmail" id="errorEmail" style="display:none;color: red;" >Error</p>
+                <p class="errorEmail" id="errorEmail" style="display:none;color: red;" ></p>
                 <label for="reemail">(*) Repita su e-mail: </label>
                 <input type="email" name="reemail" id="reemailInput" placeholder="Repita su e-mail">
-                <p class="errorReemail" id="errorReemail" style="display:none;color: red;" >Error</p>
+                <p class="errorReemail" id="errorReemail" style="display:none;color: red;" ></p>
                 <label for="contrasena">(*) Contraseña: </label>
                 <input type="password" name="contrasena" id="contrasenaInput" placeholder="Escriba su contraseña">
-                <p class="errorContrasena" id="errorContrasena" style="display:none;color: red;" >Error</p>
+                <p class="errorContrasena" id="errorContrasena" style="display:none;color: red;" ></p>
                 <label for="recontrasena">(*) Repita su contraseña: </label>
                 <input type="password" name="recontrasena" id="recontrasenaInput" placeholder="Repita su contraseña">
-                <p class="errorRecontrasena" id="errorRecontrasena" style="display:none;color: red;" >Error</p>
+                <p class="errorRecontrasena" id="errorRecontrasena" style="display:none;color: red;" ></p>
             </div>
             <p>(*) Campos obligatorios</p>
             <button id="submit" onclick="modal()">Registrar usuario</button>
 
             <div id="modal" class="modal">
-            <div class="modal-content">
-            <span class="close">&times;</span>
-            <p>Registro exitoso. Muchas gracias.</p>
-            </div>
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <p>Registro exitoso. Muchas gracias.</p>
+                </div>
             </div>
         </form>
     </section>

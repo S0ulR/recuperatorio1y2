@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta name="description" content="formulario de registro responsivo mobile first">
+    <meta name="author" content="Leandro Ruiz">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <script type="text/javascript" src="js/funciones.js" ></script>
+    <title>RECUPERATORIO - LPPA - Leandro Ruiz</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="registro.html">Recuperatorio1</a></li>
+                <li><a href="login.html">Recuperatorio2</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="column">
+        <table class="table">
+            <thead class="table-header">
+                <tr class="table-tr">
+                    <td class="table-th">ID</td>
+                    <td class="table-th">Nombre</td>
+                    <td class="table-th">Usuario</td>
+                    <td class="table-th">Email</td>
+                    <td class="table-th">Dirección</td>
+                    <td class="table-th">Teléfono</td>
+                </tr>
+            </thead>
+            <tbody class="table-body" id="tableContainer"></tbody>
+        </table>
+    </main>
+           <!-- MODAL -->
+       <div id="myModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <p class="errorModal">La página no se pudo cargar correctamente</p>
+            </div>
+        </div>
+      </div>
+    <script src="./JS/tabla.js"></script>
+    <footer>
+        <div class="creator"></div>
+    </footer>
+</body>
+</html>
