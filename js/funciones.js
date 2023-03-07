@@ -93,7 +93,10 @@ window.onload = function () {
       validaPass();
       validaRepass();
       if(!error) modal.style.display = "block";
-  })    
+      localStorage.setItem("email", email);
+      localStorage.getItem("pass", pass);
+      form.reset();
+  })
 
 var modal = document.getElementById("modal");
 var button = document.getElementById("submit");
@@ -101,7 +104,6 @@ var span = document.getElementsByClassName("close")[0];
 
 button.onclick = function modal() {
   modal.style.display = "block";
-  form.reset();
 }
 
 span.onclick = function() {
