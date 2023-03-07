@@ -27,7 +27,7 @@ fetch("https://basic-server-one.vercel.app/users")
         table.innerHTML=bodyTable; 
 })
 .catch(function(error) {
-    console.log('Ups ha ocurrido un error : '+error)
+    console.log(error)
 });
 
 const modal = document.getElementById("myModal");
