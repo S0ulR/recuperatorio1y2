@@ -3,13 +3,13 @@ window.onload = function () {
   var nombre = document.getElementById('nombreInput');
   var errorNombre = document.getElementById('errorNombre');
   nombre.onfocus=function () {
-      nombre.style.borderColor= "#ced4da"; 
+      nombre.style.borderColor= "#ffffff"; 
       errorNombre.style.display='none';
   }
   var apellido = document.getElementById('apellidoInput');
   var errorApellido = document.getElementById('errorApellido');
   apellido.onfocus=function () {
-     apellido.style.borderColor= "#ced4da"; 
+     apellido.style.borderColor= "#ffffff"; 
      errorApellido.style.display='none';
   }    
   function validaLetras(letter,errorLetter,e){
@@ -18,20 +18,20 @@ window.onload = function () {
           if (!expr.test(letter.value)) {
               letter.style.borderColor= "red";
               errorLetter.style.display='block';
-              errorLetter.innerHTML="Caracteres no válidos";
+              errorLetter.innerHTML="Sólo letras en este campo";
               error = true;
           }
       }else{
           letter.style.borderColor= "red";
           errorLetter.style.display='block';
-          errorLetter.innerHTML='Debe contener al menos 2 caracteres';
+          errorLetter.innerHTML='El campo debe contener más de 2 caracteres';
           error = true;
       }
   }
-  const email = document.getElementById('emailInput');
+  var email = document.getElementById('emailInput');
   var errorEmail = document.getElementById('errorEmail');
   email.onfocus=function () {
-      email.style.borderColor= "#ced4da"; 
+      email.style.borderColor= "#ffffff"; 
       errorEmail.style.display='none';
   }
   function validaEmail(e) {
@@ -44,10 +44,10 @@ window.onload = function () {
       }
   }
 
-  const reemail = document.getElementById('reemailInput');
+  var reemail = document.getElementById('reemailInput');
   var errorReemail = document.getElementById('errorReemail');
   reemail.onfocus=function () {
-      reemail.style.borderColor= "#ced4da"; 
+      reemail.style.borderColor= "#ffffff"; 
       errorReemail.style.display='none';
   }
   function validaReemail(e) {
@@ -59,15 +59,24 @@ window.onload = function () {
       }
   }
 
+  function validaPass(e){
+    var pass = document.getElementById('contrasenaInput');
   /*function validaPass(e){
     const pass = document.getElementById('contrasenaInput');
     var errorPass = document.getElementById('errorContrasena');
     if(pass.value.length < 6){
       pass.style.borderColor= "red";
       errorPass.style.display='block';
-      errorPass.innerHTML='Debe ingresar una contraseña de al menos 6 caracteres';
+      errorPass.innerHTML='La contraseña debe contener más de 6 caracteres';
       error = true;
     }
+
+  }
+
+  function validaRepass(e){
+    var repass = document.getElementById('recontrasenaInput');
+    var pass = document.getElementById('contrasenaInput');
+
     else{
         errorPass.display='none';
     }
@@ -102,10 +111,19 @@ var modal = document.getElementById("modal");
 var btn = document.getElementById("submit");
 var span = document.getElementsByClassName("close")[0];
 
+
+button.onclick = function modal() {
+  modal.style.display = "block";
+  form.reset();
+}
+
+span.onclick = function() {
 span.onclick = function () {
   modal.style.display = "none";
 };
 
+
+window.onclick = function(event) {
 window.onclick = function (event) {
   if (event.target == modal) {
     modal.style.display = "none";

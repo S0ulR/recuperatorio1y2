@@ -17,15 +17,6 @@ header {
     order: 1;
 }
 
-.sesion{
-    font-size: 2rem;
-    color: #ffffff;
-    font-style: italic;
-    float: right;
-    margin-right: 2rem;
-    text-shadow: none;
-}
-
 nav ul{
     list-style: none;
     padding: 5px 0;
@@ -46,7 +37,7 @@ nav li a{
     text-align: center;
 }
 
-section, #login{
+section, #login, .column{
     padding-top: 1%;
     font-family: 'Times New Roman', Times, serif;
     order: 2;
@@ -69,12 +60,6 @@ footer{
     margin-top: 2%;
 }
 
-select{
-    display: flex;
-    flex-direction: column;
-    margin-left: 3%;
-}
-
 input{
     width: 100%;
 }
@@ -85,14 +70,6 @@ label{
     margin-top: 3%;
     margin-bottom: auto;
     text-align: center;
-}
-
-textarea{
-    display: flex;
-    flex-direction: column;
-    height:5rem ;
-    width: 20rem;
-    margin-bottom: 2%;
 }
 
 button{
@@ -189,6 +166,10 @@ ul li a{
     text-align: center;
     border: 2px #ffffff solid;
     line-height: 30px;
+}
+
+#login{
+    margin-left: 2%;
 }
 
 input{
